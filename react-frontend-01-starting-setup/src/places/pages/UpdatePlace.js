@@ -75,7 +75,9 @@ const UpdatePlace = () => {
         }),
         {
           "Content-Type": "application/json",
+          Authorization: 'Bearer ' + auth.token
         }
+        
       );
       history.push('/' + auth.userId + '/places');
     } catch (err) {}
